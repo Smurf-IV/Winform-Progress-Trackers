@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressTracker", "ProgressTracker\ProgressTracker.csproj", "{FE84F88C-0B77-4C85-98DE-447720119940}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C9F773C-4C7B-4DA6-9B33-72478C550E7E}"
+	ProjectSection(SolutionItems) = preProject
+		ChangeLog.rtf = ChangeLog.rtf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
 		SccNumberOfProjects = 2

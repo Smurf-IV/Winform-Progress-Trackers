@@ -84,21 +84,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProgressTracker.cs">
+    <Compile Include="NodeBorderProgressTracker.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProgressTracker.Designer.cs">
-      <DependentUpon>ProgressTracker.cs</DependentUpon>
+    <Compile Include="NodeBorderProgressTracker.Designer.cs">
+      <DependentUpon>NodeBorderProgressTracker.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProgressTrackerImages.cs">
+    <Compile Include="NodeBorderProgressImages.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ProgressTracker.resx">
-      <DependentUpon>ProgressTracker.cs</DependentUpon>
+    <EmbeddedResource Include="NodeBorderProgressTracker.resx">
+      <DependentUpon>NodeBorderProgressTracker.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

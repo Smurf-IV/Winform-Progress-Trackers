@@ -1,6 +1,6 @@
 ﻿namespace ProgressTracker
 {
-   partial class ProgressTracker
+   partial class NodeBorderProgressTracker
    {
       /// <summary>
       /// Required designer variable.
