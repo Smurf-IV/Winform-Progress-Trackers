@@ -84,6 +84,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDesignAttributes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseDesignAttributes.Designer.cs">
+      <DependentUpon>BaseDesignAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\IntNodeBorderProgressTracker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\IntNumberThenTextProgressTracker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="NodeBorderProgressTracker.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,13 +105,44 @@
     <Compile Include="NodeBorderProgressImages.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="NumberThenTextProgressTracker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NumberThenTextProgressTracker.Designer.cs">
+      <DependentUpon>NumberThenTextProgressTracker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplaceTypeDescriptionProvider.cs" />
+    <Compile Include="Resources\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BaseDesignAttributes.resx">
+      <DependentUpon>BaseDesignAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\IntNodeBorderProgressTracker.resx">
+      <DependentUpon>IntNodeBorderProgressTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\IntNumberThenTextProgressTracker.resx">
+      <DependentUpon>IntNumberThenTextProgressTracker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NodeBorderProgressTracker.resx">
       <DependentUpon>NodeBorderProgressTracker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NumberThenTextProgressTracker.resx">
+      <DependentUpon>NumberThenTextProgressTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\NodeBorderProgressTracker.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

@@ -1,10 +1,11 @@
 ﻿namespace ProgressTracker
 {
-   partial class NodeBorderProgressTracker
+   partial class NumberThenTextProgressTracker
    {
+
       #region Component Designer generated code
 
-      /// <summary>
+      /// <summary> 
       /// Required method for Designer support - do not modify 
       /// the contents of this method with the code editor.
       /// </summary>
@@ -13,11 +14,12 @@
          ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
          this.SuspendLayout();
          // 
-         // NodeBorderProgressTracker
+         // NumberThenTextProgressTracker
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
          this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-         this.Name = "NodeBorderProgressTracker";
+         this.Name = "NumberThenTextProgressTracker";
+         this.Size = new System.Drawing.Size(556, 49);
          ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();

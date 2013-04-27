@@ -44,5 +44,5 @@ using System.Runtime.InteropServices;
 //      Minor Version - Month
 //      Build Number  - Increment
 //      Revision      - Day
-[assembly: AssemblyVersion("13.2.428.20")]
-[assembly: AssemblyFileVersion("13.2.428.20")]
+[assembly: AssemblyVersion("13.4.495.27")]
+[assembly: AssemblyFileVersion("13.4.495.27")]
