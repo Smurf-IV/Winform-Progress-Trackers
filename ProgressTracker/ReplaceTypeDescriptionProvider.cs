@@ -11,10 +11,10 @@ namespace ProgressTracker
    /// during design.  Useful for replacing abstract <see cref="Component"/>s with mock concrete
    /// subclasses so that designer doesn't complain about trying to instantiate abstract classes
    /// (designer does this when you try to instantiate a class that derives from the abstract <see cref="Component"/>.
-   /// 
+   ///
    /// To use, apply a <see cref="TypeDescriptionProviderAttribute"/> to the class <typeparamref name="T"/>,
    /// and instantiate the attribute with <code>SwitchTypeDescriptionProvider{T, TReplace})</code>.
-   /// 
+   ///
    /// E.g.:
    /// <code>
    /// [TypeDescriptionProvider(typeof(ReplaceTypeDescriptionProvider{T, TReplace}))]
@@ -22,16 +22,16 @@ namespace ProgressTracker
    /// {
    ///     // abstract members, etc
    /// }
-   /// 
+   ///
    /// public class TReplace : T
    /// {
    ///     // Implement <typeparamref name="T"/>'s abstract members.
    /// }
    /// </code>
-   /// 
+   ///
    /// </summary>
    /// <typeparam name="T">
-   /// The type replaced, and the type to which the <see cref="TypeDescriptionProviderAttribute"/> 
+   /// The type replaced, and the type to which the <see cref="TypeDescriptionProviderAttribute"/>
    /// must be applied.
    /// </typeparam>
    /// <typeparam name="TReplace">
@@ -39,7 +39,7 @@ namespace ProgressTracker
    /// </typeparam>
    internal class ReplaceTypeDescriptionProvider<T, TReplace> : TypeDescriptionProvider
    {
-      public ReplaceTypeDescriptionProvider() 
+      public ReplaceTypeDescriptionProvider()
          : base(TypeDescriptor.GetProvider(typeof(T)))
       {
          // Nada
@@ -50,7 +50,7 @@ namespace ProgressTracker
          return (objectType == typeof(T)) ? typeof(TReplace) : base.GetReflectionType(objectType, instance);
       }
 
-      public override object CreateInstance( IServiceProvider provider, Type objectType, Type[] argTypes, object[] args)
+      public override object CreateInstance(IServiceProvider provider, Type objectType, Type[] argTypes, object[] args)
       {
          if (objectType == typeof(T))
          {
@@ -59,5 +59,4 @@ namespace ProgressTracker
          return base.CreateInstance(provider, objectType, argTypes, args);
       }
    }
-
 }

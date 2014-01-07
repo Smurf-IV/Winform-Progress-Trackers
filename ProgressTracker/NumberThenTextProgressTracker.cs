@@ -1,4 +1,23 @@
-﻿using System.ComponentModel;
+﻿#region License (c)
+
+// The MIT License (MIT)
+// Copyright (c) 2013-2014 Simon Coghlan (Smurf-IV)
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+// associated documentation files (the "Software"), to deal in the Software without restriction,
+// including without limitation the rights to use, copy, modify, merge, publish, distribute,
+// sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// The above copyright notice and this permission notice shall be included in all copies or
+// substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+// NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#endregion License (c)
+
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -25,7 +44,7 @@ namespace ProgressTracker
          get { return currentCellFont; }
          set
          {
-            if (!currentCellFont.Equals( value) )
+            if (!currentCellFont.Equals(value))
             {
                currentCellFont = value;
                Refresh();
@@ -33,7 +52,7 @@ namespace ProgressTracker
          }
       }
 
-#endregion
+      #endregion Design Attributes
 
       protected override void AssignImages()
       {
@@ -73,7 +92,8 @@ namespace ProgressTracker
                tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             }
          }
-         #endregion
+
+         #endregion Create table
 
          #region Create labels and add to the bottom Row
 
@@ -94,7 +114,9 @@ namespace ProgressTracker
          {
             tableLayoutPanel1.Controls.Add(labelText, labelOffset++, 0);
          }
-         #endregion
+
+         #endregion Create labels and add to the bottom Row
+
          tableLayoutPanel1.ResumeLayout(true);
          Redraw();
       }

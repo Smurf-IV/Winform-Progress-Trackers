@@ -1,19 +1,21 @@
 ﻿#region License (c)
+
 // The MIT License (MIT)
-// Copyright (c) 2013 Simon Coghlan (Smurf-IV)
-// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
-// associated documentation files (the "Software"), to deal in the Software without restriction, 
-// including without limitation the rights to use, copy, modify, merge, publish, distribute, 
-// sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is 
+// Copyright (c) 2013-2014 Simon Coghlan (Smurf-IV)
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+// associated documentation files (the "Software"), to deal in the Software without restriction,
+// including without limitation the rights to use, copy, modify, merge, publish, distribute,
+// sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// The above copyright notice and this permission notice shall be included in all copies or 
+// The above copyright notice and this permission notice shall be included in all copies or
 // substantial portions of the Software.
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
-// NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
-// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+// NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-#endregion
+
+#endregion License (c)
 
 using System;
 using System.ComponentModel;
@@ -21,7 +23,6 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.Linq;
 using System.Windows.Forms;
 
 // ReSharper disable MemberCanBePrivate.Global
@@ -52,11 +53,11 @@ namespace ProgressTracker
       protected abstract void CreateImages();
 
       /// <summary>
-      /// Triggered when a Font is changed or Labels are changed 
+      /// Triggered when a Font is changed or Labels are changed
       /// </summary>
       protected abstract void ReSizeTable();
 
-      #endregion
+      #endregion Abstract Methods
 
       #region Design Attributes
 
@@ -174,7 +175,6 @@ namespace ProgressTracker
          }
       }
 
-
       /// <summary>
       /// Overrides the default button font to a more suitable headline font.
       /// </summary>
@@ -198,8 +198,7 @@ namespace ProgressTracker
          }
       }
 
-
-      #endregion
+      #endregion Design Attributes
 
       #region Shadow control
 
@@ -214,30 +213,37 @@ namespace ProgressTracker
                xOffset = -shadowOffset;
                yOfset = -shadowOffset;
                break;
+
             case ContentAlignment.TopCenter:
                xOffset = shadowOffset;
                yOfset = 0;
                break;
+
             case ContentAlignment.TopRight:
                xOffset = shadowOffset;
                yOfset = -shadowOffset;
                break;
+
             case ContentAlignment.MiddleLeft:
                xOffset = 0;
                yOfset = -shadowOffset;
                break;
+
             case ContentAlignment.MiddleRight:
                xOffset = shadowOffset;
                yOfset = 0;
                break;
+
             case ContentAlignment.BottomLeft:
                xOffset = -shadowOffset;
                yOfset = shadowOffset;
                break;
+
             case ContentAlignment.BottomCenter:
                xOffset = 0;
                yOfset = shadowOffset;
                break;
+
             case ContentAlignment.BottomRight:
                xOffset = shadowOffset;
                yOfset = shadowOffset;
@@ -294,7 +300,7 @@ namespace ProgressTracker
          }
       }
 
-      #endregion
+      #endregion Shadow control
 
       #region Control events
 
@@ -317,9 +323,11 @@ namespace ProgressTracker
             Refresh();
          }
       }
-      #endregion
+
+      #endregion Control events
 
       #region Stepping handler
+
       [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
       public int Progress
       {
@@ -332,8 +340,8 @@ namespace ProgressTracker
                AssignImages();
             }
          }
-
       }
+
       private int step;
 
       [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -345,12 +353,12 @@ namespace ProgressTracker
             Progress--;
       }
 
-      #endregion
-
+      #endregion Stepping handler
 
       #region ISupportInitialize
 
       private bool initialized;
+
       [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
       public void BeginInit()
       {
@@ -365,7 +373,7 @@ namespace ProgressTracker
          Redraw();
       }
 
-      #endregion
+      #endregion ISupportInitialize
    }
 
    internal class BaseDesignAttributesReplace : BaseDesignAttributes
@@ -385,6 +393,7 @@ namespace ProgressTracker
       }
    }
 }
+
 // ReSharper restore UnusedMember.Global
 // ReSharper restore MemberCanBeProtected.Global
 // ReSharper restore MemberCanBePrivate.Global
