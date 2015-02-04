@@ -2,7 +2,6 @@
 {
    partial class NumberThenTextProgressTracker
    {
-
       #region Component Designer generated code
 
       /// <summary> 
